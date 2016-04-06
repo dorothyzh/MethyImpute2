@@ -1,0 +1,18 @@
+rm(list=ls())
+ls()
+#remove.packages("MetImpute",lib="/Library/Frameworks/R.framework/Versions/3.2/Resources/library")
+remove.packages("MethyImpute",lib="/Library/Frameworks/R.framework/Versions/3.2/Resources/library")
+library(devtools)
+#install_github("dorothyzh/MethylationImputation",subdir="MetImpute")
+install_github("dorothyzh/MethyImpute2",subdir="MethyImpute")
+
+library(plotrix)
+library(coxme)
+library(kinship2)
+library(nlme)
+#library(MetImpute)
+library(MethyImpute)
+data(dat1)
+data(dat2)
+qc_frac = 1-5/dim(dat2)[2]
+Seq <- MetIm(sequence = t(dat1), microarray = t(dat2), lambda=0.3, cut=10, cvfold=0, use.mvalue = T, qc_frac = qc_frac)
