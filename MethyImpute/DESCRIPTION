@@ -4,11 +4,21 @@ Date: 2016-03-20
 Title: Various Plotting Functions
 Author: Degui Zhi
 Maintainer: Huan ZHONG <zhdorothy5@gmail.com>
-Imports: grDevices, graphics, stats, utils
-Depends: plotrix, coxme, kinship2, nlme, MASS
+Imports:
+    grDevices,
+    graphics,
+    stats,
+    utils
+Depends:
+    plotrix,
+    coxme,
+    kinship2,
+    nlme,
+    MASS
 Description: Methylation Imputation
 License: No
 NeedsCompilation: no
 Packaged: 2016-03-20 10:31:35 UTC; root
 Repository: Github
 Date/Publication: No
+RoxygenNote: 5.0.1
